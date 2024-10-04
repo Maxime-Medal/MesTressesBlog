@@ -8,6 +8,8 @@ namespace Data.Models
 {
     public class DocumentTranslation
     {
+        public BaseInfo BaseInfo { get; set; } = new BaseInfo();
+
         public int Id { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }

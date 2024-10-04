@@ -8,6 +8,8 @@ namespace Data.Models
 {
     public class Competence
     {
+        public BaseInfo BaseInfo { get; set; } = new BaseInfo();
+
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }

@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace Data.Models
 {
-    public class Article : Base
+    public class Article
     {
+        public BaseInfo BaseInfo { get; set; } = new BaseInfo();
+
         public int Id { get; set; }
         public DateTime PublicationDate { get; set; }
         public string Status { get; set; } // published, draft, deleted

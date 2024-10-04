@@ -7,16 +7,15 @@ using System.Threading.Tasks;
 
 namespace Data.Models
 {
-    public class Student
+    public class StudentClassroom
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public DateOnly Birthdate { get; set; }
-        public IList<int> StudentNumber { get; set; } = new List<int>(); // numéro de l'élève de la classe x
+        public int? StudentId { get; set; }
+        public Student? Student { get; set; }
+        public int? ClassroomId { get; set; }
+        public Classroom? Classroom { get; set; }
 
-        public ICollection<Classroom> Classrooms { get; set; } = new List<Classroom>();
-        public ICollection<Grade> Grades { get; set; }=new List<Grade>();
-        public ICollection<Competence> Competences { get; set; } = new List<Competence>();
+        // Numéro d'élève spécifique à chaque classe
+        public int StudentNumber { get; set; }
 
     }
 }

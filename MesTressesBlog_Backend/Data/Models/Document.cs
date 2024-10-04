@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace Data.Models
 {
-    public class Document : Base
+    public class Document
     {
+        public BaseInfo BaseInfo { get; set; } = new BaseInfo();
+
         public int Id { get; set; }
         public string Type { get; set; } // PDF, Audio, Video, Link
-        public string FilePath { get; set; } // chemin d'accès vers minio
+        public IList<string> FilePath { get; set; } // chemin d'accès vers minio
         public DateTime UploadDate { get; set; }
 
         public int? ArticleId { get; set; }

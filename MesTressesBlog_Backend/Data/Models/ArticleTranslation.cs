@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Data.Models
 {
-    public class ArticleTranslation : Base
+    public class ArticleTranslation
     {
+        public BaseInfo BaseInfo { get; set; } = new BaseInfo();
+
         public int Id { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }

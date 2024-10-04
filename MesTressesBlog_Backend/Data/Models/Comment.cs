@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Data.Models
 {
-    public class Comment : Base
+    public class Comment
     {
+        public BaseInfo BaseInfo { get; set; } = new BaseInfo();
+
         public int Id { get; set; }
         public string Content { get; set; }
         public DateTime TimeStamp { get; set; }

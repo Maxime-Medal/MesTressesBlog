@@ -675,9 +675,6 @@ namespace Data.Migrations
                             b1.Property<DateTime>("CreatedDate")
                                 .HasColumnType("timestamp with time zone");
 
-                            b1.Property<int>("Id")
-                                .HasColumnType("integer");
-
                             b1.Property<int?>("ModifyByUserId")
                                 .HasColumnType("integer")
                                 .HasColumnName("ModifiedBy");
@@ -727,9 +724,6 @@ namespace Data.Migrations
                             b1.Property<DateTime>("CreatedDate")
                                 .HasColumnType("timestamp with time zone");
 
-                            b1.Property<int>("Id")
-                                .HasColumnType("integer");
-
                             b1.Property<int?>("ModifyByUserId")
                                 .HasColumnType("integer")
                                 .HasColumnName("ModifiedBy");
@@ -766,9 +760,6 @@ namespace Data.Migrations
 
                             b1.Property<DateTime>("CreatedDate")
                                 .HasColumnType("timestamp with time zone");
-
-                            b1.Property<int>("Id")
-                                .HasColumnType("integer");
 
                             b1.Property<int?>("ModifyByUserId")
                                 .HasColumnType("integer")
@@ -811,9 +802,6 @@ namespace Data.Migrations
                             b1.Property<DateTime>("CreatedDate")
                                 .HasColumnType("timestamp with time zone");
 
-                            b1.Property<int>("Id")
-                                .HasColumnType("integer");
-
                             b1.Property<int?>("ModifyByUserId")
                                 .HasColumnType("integer")
                                 .HasColumnName("ModifiedBy");
@@ -850,9 +838,6 @@ namespace Data.Migrations
 
                             b1.Property<DateTime>("CreatedDate")
                                 .HasColumnType("timestamp with time zone");
-
-                            b1.Property<int>("Id")
-                                .HasColumnType("integer");
 
                             b1.Property<int?>("ModifyByUserId")
                                 .HasColumnType("integer")
@@ -894,9 +879,6 @@ namespace Data.Migrations
 
                             b1.Property<DateTime>("CreatedDate")
                                 .HasColumnType("timestamp with time zone");
-
-                            b1.Property<int>("Id")
-                                .HasColumnType("integer");
 
                             b1.Property<int?>("ModifyByUserId")
                                 .HasColumnType("integer")
@@ -947,9 +929,6 @@ namespace Data.Migrations
                             b1.Property<DateTime>("CreatedDate")
                                 .HasColumnType("timestamp with time zone");
 
-                            b1.Property<int>("Id")
-                                .HasColumnType("integer");
-
                             b1.Property<int?>("ModifyByUserId")
                                 .HasColumnType("integer")
                                 .HasColumnName("ModifiedBy");
@@ -992,9 +971,6 @@ namespace Data.Migrations
 
                             b1.Property<DateTime>("CreatedDate")
                                 .HasColumnType("timestamp with time zone");
-
-                            b1.Property<int>("Id")
-                                .HasColumnType("integer");
 
                             b1.Property<int?>("ModifyByUserId")
                                 .HasColumnType("integer")
@@ -1039,9 +1015,6 @@ namespace Data.Migrations
                             b1.Property<DateTime>("CreatedDate")
                                 .HasColumnType("timestamp with time zone");
 
-                            b1.Property<int>("Id")
-                                .HasColumnType("integer");
-
                             b1.Property<int?>("ModifyByUserId")
                                 .HasColumnType("integer")
                                 .HasColumnName("ModifiedBy");
@@ -1078,9 +1051,6 @@ namespace Data.Migrations
 
                             b1.Property<DateTime>("CreatedDate")
                                 .HasColumnType("timestamp with time zone");
-
-                            b1.Property<int>("Id")
-                                .HasColumnType("integer");
 
                             b1.Property<int?>("ModifyByUserId")
                                 .HasColumnType("integer")
@@ -1123,9 +1093,6 @@ namespace Data.Migrations
                             b1.Property<DateTime>("CreatedDate")
                                 .HasColumnType("timestamp with time zone");
 
-                            b1.Property<int>("Id")
-                                .HasColumnType("integer");
-
                             b1.Property<int?>("ModifyByUserId")
                                 .HasColumnType("integer")
                                 .HasColumnName("ModifiedBy");
@@ -1167,9 +1134,6 @@ namespace Data.Migrations
                             b1.Property<DateTime>("CreatedDate")
                                 .HasColumnType("timestamp with time zone");
 
-                            b1.Property<int>("Id")
-                                .HasColumnType("integer");
-
                             b1.Property<int?>("ModifyByUserId")
                                 .HasColumnType("integer")
                                 .HasColumnName("ModifiedBy");
@@ -1205,9 +1169,6 @@ namespace Data.Migrations
                             b1.Property<DateTime>("CreatedDate")
                                 .HasColumnType("timestamp with time zone");
 
-                            b1.Property<int>("Id")
-                                .HasColumnType("integer");
-
                             b1.Property<int?>("ModifyByUserId")
                                 .HasColumnType("integer")
                                 .HasColumnName("ModifiedBy");
@@ -1240,9 +1201,6 @@ namespace Data.Migrations
 
                             b1.Property<DateTime>("CreatedDate")
                                 .HasColumnType("timestamp with time zone");
-
-                            b1.Property<int>("Id")
-                                .HasColumnType("integer");
 
                             b1.Property<int?>("ModifyByUserId")
                                 .HasColumnType("integer")
@@ -1285,9 +1243,6 @@ namespace Data.Migrations
                             b1.Property<DateTime>("CreatedDate")
                                 .HasColumnType("timestamp with time zone");
 
-                            b1.Property<int>("Id")
-                                .HasColumnType("integer");
-
                             b1.Property<int?>("ModifyByUserId")
                                 .HasColumnType("integer")
                                 .HasColumnName("ModifiedBy");
@@ -1325,9 +1280,6 @@ namespace Data.Migrations
                             b1.Property<DateTime>("CreatedDate")
                                 .HasColumnType("timestamp with time zone");
 
-                            b1.Property<int>("Id")
-                                .HasColumnType("integer");
-
                             b1.Property<int?>("ModifyByUserId")
                                 .HasColumnType("integer")
                                 .HasColumnName("ModifiedBy");
@@ -1360,9 +1312,6 @@ namespace Data.Migrations
 
                             b1.Property<DateTime>("CreatedDate")
                                 .HasColumnType("timestamp with time zone");
-
-                            b1.Property<int>("Id")
-                                .HasColumnType("integer");
 
                             b1.Property<int?>("ModifyByUserId")
                                 .HasColumnType("integer")

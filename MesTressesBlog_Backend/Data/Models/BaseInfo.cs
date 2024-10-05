@@ -9,7 +9,6 @@ namespace Data.Models
 {
     public class BaseInfo
     {
-        public int Id { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime UpdatedDate { get; set; }
 

@@ -1,6 +1,10 @@
-@API_HostAddress = http://localhost:5082
+@API_HostAddress = https://localhost:7052
 
 GET {{API_HostAddress}}/weatherforecast/
 Accept: application/json
+
+###
+
+GET {{API_HostAddress}}/article?id=1&languageCode=FR
 
 ###

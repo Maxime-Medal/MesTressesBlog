@@ -19,10 +19,7 @@ builder.Services.AddDbContext<MyDbContext>(opt =>
     opt.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Injection des services
-builder.Services.AddScoped<IArticleService, ArticleService>();
-
-// Injection des repositories
-builder.Services.AddScoped<IArticleRepository, ArticleRepository>();
+builder.Services.RegisterInternalService();
 
 // TODO faire L'auto-mapper
 // Mise en place de l'automapper 

@@ -20,6 +20,7 @@ namespace Business.Service
         public async Task<ArticleDTO> GetFullArticleByIdAsync(int id)
         {
             var article = await _articleRepository.GetFullArticleByIdAsync(id);
+            // récupération tu repository et conversion en DTO
 
             return new ArticleDTO();
         }

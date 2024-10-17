@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Data.Models
 {
-    public class DocumentTranslation
+    public class DocumentTranslationDTO
     {
-        public BaseInfo BaseInfo { get; set; } = new BaseInfo();
+        public BaseInfoDTO BaseInfo { get; set; } = new BaseInfoDTO();
 
         public int Id { get; set; }
         public string Title { get; set; } = string.Empty;
@@ -16,8 +16,8 @@ namespace Data.Models
         public string ShortContent { get; set; } = string.Empty;
 
         public int? LanguageId { get; set; }
-        public Language? Language { get; set; }
+        public LanguageDTO? Language { get; set; }
         public int? DocumentId { get; set; }
-        public Document? Document { get; set; } 
+        public DocumentDTO? Document { get; set; } 
     }
 }

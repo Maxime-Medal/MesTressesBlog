@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Data.Models
 {
-    public class Comment
+    public class CommentDTO
     {
-        public BaseInfo BaseInfo { get; set; } = new BaseInfo();
+        public BaseInfoDTO BaseInfo { get; set; } = new BaseInfoDTO();
 
         public int Id { get; set; }
         public string Content { get; set; } = string.Empty;
@@ -17,6 +17,6 @@ namespace Data.Models
         public int? ArticleId { get; set; }
         public Article? Article { get; set; }
         public int? UserId { get; set; }
-        public User? User { get; set; }
+        public UserDTO? User { get; set; }
     }
 }

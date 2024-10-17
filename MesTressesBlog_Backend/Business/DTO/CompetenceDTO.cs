@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Data.Models
 {
-    public class Competence
+    public class CompetenceDTO
     {
-        public BaseInfo BaseInfo { get; set; } = new BaseInfo();
+        public BaseInfoDTO BaseInfo { get; set; } = new BaseInfoDTO();
 
         public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
@@ -16,13 +16,13 @@ namespace Data.Models
         public DateTime AssessmentDate { get; set; }
 
         public int? DomainId { get; set; }
-        public Domain? Domain { get; set; }
+        public DomainDTO? Domain { get; set; }
         public int? LevelId { get; set; }
-        public Level? Level { get; set; }
+        public LevelDTO? Level { get; set; }
         public int? CategoryId { get; set; }
         public Category? Category { get; set; }
 
-        public ICollection<Student> Students { get; set; } = new List<Student>();
-        public ICollection<Grade> Grades { get; set; } = new List<Grade>();
+        public ICollection<StudentDTO> Students { get; set; } = new List<StudentDTO>();
+        public ICollection<GradeDTO> Grades { get; set; } = new List<GradeDTO>();
     }
 }

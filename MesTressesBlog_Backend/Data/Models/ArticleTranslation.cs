@@ -11,9 +11,9 @@ namespace Data.Models
         public BaseInfo BaseInfo { get; set; } = new BaseInfo();
 
         public int Id { get; set; }
-        public string Title { get; set; }
-        public string Content { get; set; }
-        public string ShortContent { get; set; }
+        public string Title { get; set; } = string.Empty;
+        public string Content { get; set; } = string.Empty;
+        public string ShortContent { get; set; } = string.Empty;
 
         public int? ArticleId { get; set; }
         public Article? Article { get; set; }

@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace Data.Models
 {
-    public class User
+    public class UserDTO
     {
+        public BaseInfoDTO BaseInfo { get; set; } = new BaseInfoDTO();
+
         public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
         public string Login { get; set; } = string.Empty;
@@ -19,9 +21,9 @@ namespace Data.Models
         public string PictureFilePath { get; set; } = string.Empty; // chemin d'accès vers minio
 
         public int? LanguageId { get; set; }
-        public Language? Language { get; set; }
+        public LanguageDTO? Language { get; set; }
         public int? RoleId { get; set; }
-        public Role? Role { get; set; }
+        public RoleDTO? Role { get; set; }
         public ICollection<Article> Articles { get; set; } = new List<Article>();
     }
 }

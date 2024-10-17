@@ -12,7 +12,7 @@ namespace Data.Models
         public BaseInfo BaseInfo { get; set; } = new BaseInfo();
 
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
         public DateOnly Birthdate { get; set; }
 
         public ICollection<Classroom> Classrooms { get; set; } = new List<Classroom>();

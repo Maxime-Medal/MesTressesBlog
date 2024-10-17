@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Data.Models
 {
-    public class Domain
+    public class DomainDTO
     {
-        public BaseInfo BaseInfo { get; set; } = new BaseInfo();
+        public BaseInfoDTO BaseInfo { get; set; } = new BaseInfoDTO();
 
         public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
 
         public ICollection<Article> Articles { get; set; } = new List<Article>();
-        public ICollection<DomainTranslation> DomainTranslations { get; set; } = new List<DomainTranslation>();
+        public ICollection<DomainTranslationDTO> DomainTranslations { get; set; } = new List<DomainTranslationDTO>();
     }
 }

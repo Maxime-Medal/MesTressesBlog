@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Data.Models
 {
-    public class CategoryTranslation
+    public class CategoryTranslationDTO
     {
-        public BaseInfo BaseInfo { get; set; } = new BaseInfo();
+        public BaseInfoDTO BaseInfo { get; set; } = new BaseInfoDTO();
 
         public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
@@ -17,6 +17,6 @@ namespace Data.Models
         public int? CategoryId { get; set; }
         public Category? Category { get; set; }
         public int? LanguageId { get; set; }
-        public Language? Language { get; set; }
+        public LanguageDTO? Language { get; set; }
     }
 }

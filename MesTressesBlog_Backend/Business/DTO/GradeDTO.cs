@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace Data.Models
 {
-    public class Grade
+    public class GradeDTO
     {
-        public BaseInfo BaseInfo { get; set; } = new BaseInfo();
+        public BaseInfoDTO BaseInfo { get; set; } = new BaseInfoDTO();
 
         public int Id { get; set; }
         public string Value { get; set; } = string.Empty;
         public string Name { get; set; } = string.Empty;
 
         public int? StudentId { get; set; }
-        public Student? Student { get; set; }
+        public StudentDTO? Student { get; set; }
 
-        public ICollection<Competence> Competences { get; set; } = new List<Competence>();
+        public ICollection<CompetenceDTO> Competences { get; set; } = new List<CompetenceDTO>();
     }
 }

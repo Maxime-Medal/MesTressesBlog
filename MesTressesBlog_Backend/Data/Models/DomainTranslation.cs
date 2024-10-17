@@ -11,8 +11,8 @@ namespace Data.Models
         public BaseInfo BaseInfo { get; set; } = new BaseInfo();
 
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
 
         public int? DomainId { get; set; }
         public Domain? Domain { get; set; }

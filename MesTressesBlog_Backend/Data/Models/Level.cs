@@ -11,7 +11,7 @@ namespace Data.Models
         public BaseInfo BaseInfo { get; set; } = new BaseInfo();
 
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         public ICollection<Article> Articles { get; set; } = new List<Article>();
         public ICollection<LevelTranslation> LevelTranslations { get; set; } = new List<LevelTranslation>();

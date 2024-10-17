@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace Data.Models
 {
-    public class StudentClassroom
+    public class StudentClassroomDTO
     {
-        public BaseInfo BaseInfo { get; set; } = new BaseInfo();
+        public BaseInfoDTO BaseInfo { get; set; } = new BaseInfoDTO();
 
         public int? StudentId { get; set; }
-        public Student? Student { get; set; }
+        public StudentDTO? Student { get; set; }
         public int? ClassroomId { get; set; }
-        public Classroom? Classroom { get; set; }
+        public ClassroomDTO? Classroom { get; set; }
 
         // Numéro d'élève spécifique à chaque classe
         public int StudentNumber { get; set; }

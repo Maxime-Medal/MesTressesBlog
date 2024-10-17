@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Data.Models
 {
-    public class BaseInfo
+    public class BaseInfoDTO
     {
         public DateTime CreatedDate { get; set; }
         public DateTime UpdatedDate { get; set; }

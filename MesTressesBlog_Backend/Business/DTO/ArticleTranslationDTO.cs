@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace Data.Models
 {
-    public class DocumentTranslation
+    public class ArticleTranslationDTO
     {
-        public BaseInfo BaseInfo { get; set; } = new BaseInfo();
+        public BaseInfoDTO BaseInfo { get; set; } = new BaseInfoDTO();
 
         public int Id { get; set; }
         public string Title { get; set; } = string.Empty;
         public string Content { get; set; } = string.Empty;
         public string ShortContent { get; set; } = string.Empty;
 
+        public int? ArticleId { get; set; }
+        public Article? Article { get; set; }
         public int? LanguageId { get; set; }
-        public Language? Language { get; set; }
-        public int? DocumentId { get; set; }
-        public Document? Document { get; set; } 
+        public LanguageDTO? Language { get; set; }
     }
 }

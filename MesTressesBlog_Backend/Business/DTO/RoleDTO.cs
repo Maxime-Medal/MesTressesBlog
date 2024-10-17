@@ -6,17 +6,14 @@ using System.Threading.Tasks;
 
 namespace Data.Models
 {
-    public class CategoryTranslation
+    public class RoleDTO
     {
-        public BaseInfo BaseInfo { get; set; } = new BaseInfo();
+        public BaseInfoDTO BaseInfo { get; set; } = new BaseInfoDTO();
 
         public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
 
-        public int? CategoryId { get; set; }
-        public Category? Category { get; set; }
-        public int? LanguageId { get; set; }
-        public Language? Language { get; set; }
+        public ICollection<UserDTO> Users { get; set; } = new List<UserDTO>();
     }
 }

@@ -11,8 +11,8 @@ namespace Data.Models
         public BaseInfo BaseInfo { get; set; } = new BaseInfo();
 
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string SchoolYear{ get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string SchoolYear{ get; set; } = string.Empty;
 
         public ICollection<Student> Students { get; set; } = new List<Student>();
         public ICollection<StudentClassroom> StudentClassrooms { get; set; } = new List<StudentClassroom>();

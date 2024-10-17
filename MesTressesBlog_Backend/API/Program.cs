@@ -1,3 +1,5 @@
+using Business.Service;
+using Business.Service.Interfaces;
 using Data;
 using Data.Repository;
 using Data.Repository.Interface;
@@ -13,10 +15,17 @@ builder.Services.AddControllers().AddNewtonsoftJson(options =>
 });
 
 // Add services to the container.
-builder.Services.AddDbContextPool<MyDbContext>(opt =>
+builder.Services.AddDbContext<MyDbContext>(opt =>
     opt.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+// Injection des services
+builder.Services.AddScoped<IArticleService, ArticleService>();
+
+// Injection des repositories
 builder.Services.AddScoped<IArticleRepository, ArticleRepository>();
+
+// TODO faire L'auto-mapper
+// Mise en place de l'automapper 
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

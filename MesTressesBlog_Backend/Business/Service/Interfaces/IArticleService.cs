@@ -5,15 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Data.Repository.Interface
+namespace Business.Service.Interfaces
 {
-    public interface IArticleRepository
+    public interface IArticleService
     {
-        Task<Article> GetFullArticleByIdAsync(int id);
+        Task<ArticleDTO> GetFullArticleByIdAsync(int id);
         Task<Article> GetArticleByIdWithTranslationAsync(int id, string languageCode);
         Task<IEnumerable<Article>> GetAllArticlesAsync();
-        Task<int> AddArticleAsync(Article article);
-        Task<int> UpdateArticleAsync(Article article);
+        Task<int> AddArticleAsync();
+        Task<Article> UpdateArticleAsync();
         Task<bool> DeleteArticleAsync(int id);
+
     }
 }

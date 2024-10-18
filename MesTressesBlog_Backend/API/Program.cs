@@ -1,10 +1,13 @@
+using AutoMapper;
 using Business.Service;
 using Business.Service.Interfaces;
 using Data;
+using Data.Models;
 using Data.Repository;
 using Data.Repository.Interface;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
+using Business.Mapper;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,9 +23,10 @@ builder.Services.AddDbContext<MyDbContext>(opt =>
 
 // Injection des services
 builder.Services.RegisterInternalService();
+builder.Services.AddAutoMapperProfiles();
 
 // TODO faire L'auto-mapper
-// Mise en place de l'automapper 
+// Mise en place de l'automapper
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

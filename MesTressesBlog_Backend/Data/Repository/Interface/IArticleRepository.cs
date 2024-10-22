@@ -9,7 +9,7 @@ namespace Data.Repository.Interface
 {
     public interface IArticleRepository
     {
-        Task<Article> GetFullArticleByIdAsync(int id);
+        Task<Article> GetArticleByIdAsync(int id);
         Task<Article> GetArticleByIdWithTranslationAsync(int id, string languageCode);
         Task<IEnumerable<Article>> GetAllArticlesAsync();
         Task<int> AddArticleAsync(Article article);

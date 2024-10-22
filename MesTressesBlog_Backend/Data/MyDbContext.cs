@@ -10,7 +10,7 @@ namespace Data
 {
     public class MyDbContext : DbContext
     {
-        public MyDbContext(DbContextOptions<MyDbContext> options) : base(options) 
+        public MyDbContext(DbContextOptions<MyDbContext> options) : base(options)
         {
         }
 
@@ -33,19 +33,20 @@ namespace Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<StudentClassroom>()
-                .HasKey(sc => new { sc.StudentId, sc.ClassroomId});
-
-            modelBuilder.Entity<StudentClassroom>()
-                .HasOne(sc => sc.Student)
-                .WithMany(s => s.StudentClassrooms)
-                .HasForeignKey(sc => sc.StudentId);
-
-            modelBuilder.Entity<StudentClassroom>()
-                .HasOne(sc => sc.Classroom)
-                .WithMany(c => c.StudentClassrooms)
-                .HasForeignKey(sc => sc.ClassroomId)
-                .OnDelete(DeleteBehavior.Restrict); // Pas de suppression en cascade
+            modelBuilder.Entity<StudentClassroom>(entity =>
+            {
+                entity.HasKey(sc => new { sc.StudentId, sc.ClassroomId });
+                entity
+                    .HasOne(sc => sc.Student)
+                    .WithMany(s => s.StudentClassrooms)
+                    .HasForeignKey(sc => sc.StudentId);
+                entity
+                    .HasOne(sc => sc.Classroom)
+                    .WithMany(c => c.StudentClassrooms)
+                    .HasForeignKey(sc => sc.ClassroomId)
+                    .OnDelete(DeleteBehavior.Restrict); // Pas de suppression en cascade
+                entity.OwnsOne(s => s.BaseInfo);
+            });
 
             modelBuilder.Entity<Article>()
                 .OwnsOne(s => s.BaseInfo);

@@ -14,9 +14,6 @@ namespace Data.Models
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
 
-        public int? DomainId { get; set; }
-        public DomainDTO? Domain { get; set; }
-        public int? LanguageId { get; set; }
-        public LanguageDTO? Language { get; set; }
+        public string? LanguageCode { get; set; }
     }
 }

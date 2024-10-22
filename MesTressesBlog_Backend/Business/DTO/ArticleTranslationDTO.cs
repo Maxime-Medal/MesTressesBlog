@@ -14,10 +14,6 @@ namespace Data.Models
         public string Title { get; set; } = string.Empty;
         public string Content { get; set; } = string.Empty;
         public string ShortContent { get; set; } = string.Empty;
-
-        public int? ArticleId { get; set; }
-        public Article? Article { get; set; }
-        public int? LanguageId { get; set; }
-        public LanguageDTO? Language { get; set; }
+        public string LanguageCode { get; set; } = string.Empty;
     }
 }

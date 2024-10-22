@@ -25,9 +25,6 @@ builder.Services.AddDbContext<MyDbContext>(opt =>
 builder.Services.RegisterInternalService();
 builder.Services.AddAutoMapperProfiles();
 
-// TODO faire L'auto-mapper
-// Mise en place de l'automapper
-
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

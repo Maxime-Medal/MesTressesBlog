@@ -69,7 +69,7 @@ namespace Data.Repository
             }
         }
 
-        public async Task<Article> GetFullArticleByIdAsync(int id)
+        public async Task<Article> GetArticleByIdAsync(int id)
         {
             try
             {
@@ -78,6 +78,9 @@ namespace Data.Repository
                     .Include(a => a.Translations)
                     .Include (a => a.Documents)
                     .Include (a => a.Comments)
+                    .Include (a => a.Domain)
+                    .Include (a => a.Level)
+                    .Include (a => a.Category)
                     .FirstOrDefaultAsync();
                 if (newArticle == null)
                 {

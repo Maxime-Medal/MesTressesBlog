@@ -15,8 +15,6 @@ namespace Data.Models
         public DateTime TimeStamp { get; set; }
 
         public int? ArticleId { get; set; }
-        public Article? Article { get; set; }
-        public int? UserId { get; set; }
-        public UserDTO? User { get; set; }
+        public string UserName { get; set; } = string.Empty;
     }
 }

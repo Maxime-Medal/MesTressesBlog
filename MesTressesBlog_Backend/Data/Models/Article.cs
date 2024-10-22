@@ -13,7 +13,7 @@ namespace Data.Models
 
         public int Id { get; set; }
         public DateTime PublicationDate { get; set; }
-        public string Status { get; set; } // published, draft, deleted
+        public string Status { get; set; } = string.Empty; // published, draft, deleted
         public bool IsPublished { get; set; }
         public bool IsDeleted { get; set; }
 

@@ -14,7 +14,7 @@ namespace Data.Models
         public string? Name { get; set; } = string.Empty;
         public string Code { get; set; } = string.Empty;
 
-        public ICollection<ArticleTranslation> ArticleTranslations { get; set; } = new List<ArticleTranslation>();
+        public ICollection<ArticleTranslationDTO> ArticleTranslations { get; set; } = new List<ArticleTranslationDTO>();
         public ICollection<DocumentTranslationDTO> DocumentTranslations { get; set; } = new List<DocumentTranslationDTO>();
         public ICollection<DomainTranslationDTO> DomainTranslations { get; set; } = new List<DomainTranslationDTO>();
         public ICollection<LevelTranslationDTO> LevelTranslations { get; set; } = new List<LevelTranslationDTO>();

@@ -22,19 +22,19 @@ namespace API.Controllers
         }
 
         [HttpGet("{id}/{languageCode}")]
-        public Task<Article> GetArticleByIdWithTranslation(int id, string languageCode)
+        public Task<ArticleWithTranslationsDTO> GetArticleByIdWithTranslation(int id, string languageCode)
         {
             return _articleService.GetArticleByIdWithTranslationAsync(id, languageCode);
         }
 
         [HttpGet("{id}")]
-        public Task<ArticleDTO> GetFullArticleById(int id)
+        public Task<ArticleWithTranslationsDTO> GetArticleById(int id)
         {
-            return _articleService.GetFullArticleByIdAsync(id);
+            return _articleService.GetArticleByIdAsync(id);
         }
 
         [HttpGet]
-        public Task<IEnumerable<Article>> GetAllArticles()
+        public Task<IEnumerable<ArticleWithTranslationsDTO>> GetAllArticles()
         {
             return _articleService.GetAllArticlesAsync();
         }

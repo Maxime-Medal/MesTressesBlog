@@ -11,7 +11,7 @@ namespace Data.Models
         public BaseInfoDTO BaseInfo { get; set; } = new BaseInfoDTO();
 
         public int Id { get; set; }
-        public string Type { get; set; } // PDF, Audio, Video, Link
+        public string Type { get; set; } = string.Empty; // PDF, Audio, Video, Link
         public IList<string> FilePath { get; set; } = new List<string>(); // chemin d'accès vers minio
         public DateTime UploadDate { get; set; }
 

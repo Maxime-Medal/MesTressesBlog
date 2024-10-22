@@ -1,4 +1,5 @@
-﻿using Business.Service.Interfaces;
+﻿using AutoMapper;
+using Business.Service.Interfaces;
 using Data.Models;
 using Data.Repository.Interface;
 using System;
@@ -12,35 +13,43 @@ namespace Business.Service
     public class ArticleService : IArticleService
     {
         private readonly IArticleRepository _articleRepository;
-        public ArticleService(IArticleRepository articleRepository)
+        private readonly IMapper _mapper;
+        public ArticleService(
+            IArticleRepository articleRepository,
+            IMapper mapper
+            )
         {
             _articleRepository = articleRepository;
+            _mapper = mapper;
         }
 
-        public async Task<ArticleDTO> GetFullArticleByIdAsync(int id)
+        public async Task<ArticleWithTranslationsDTO> GetArticleByIdAsync(int id)
         {
-            var article = await _articleRepository.GetFullArticleByIdAsync(id);
+            var article = await _articleRepository.GetArticleByIdAsync(id);  // TODO
             // récupération tu repository et conversion en DTO
+            var newArticleDTO = _mapper.Map<ArticleWithTranslationsDTO>( article );
 
-            return new ArticleDTO();
+            return newArticleDTO;
         }
-        public async Task<Article> GetArticleByIdWithTranslationAsync(int id, string languageCode)
+        public async Task<ArticleWithTranslationsDTO> GetArticleByIdWithTranslationAsync(int id, string languageCode)
         {
-            return await _articleRepository.GetArticleByIdWithTranslationAsync(id, languageCode);
+                await _articleRepository.GetArticleByIdWithTranslationAsync(id, languageCode);  // TODO
+            return new ArticleWithTranslationsDTO(); 
         }
-        public async Task<IEnumerable<Article>> GetAllArticlesAsync()
+        public async Task<IEnumerable<ArticleWithTranslationsDTO>> GetAllArticlesAsync()
         {
-            return await _articleRepository.GetAllArticlesAsync();
+                await _articleRepository.GetAllArticlesAsync(); // TODO
+            return new List<ArticleWithTranslationsDTO>();
         }
         public Task<int> AddArticleAsync()
         //public async Task<int> AddArticleAsync()
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException();  // TODO
         }
-        public Task<Article> UpdateArticleAsync()
+        public Task<ArticleWithTranslationsDTO> UpdateArticleAsync()
         //public async Task<Article> UpdateArticleAsync()
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException(); // TODO
         }
         public async Task<bool> DeleteArticleAsync(int id)
         {
